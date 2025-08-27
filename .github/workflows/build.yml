@@ -67,6 +67,7 @@ jobs:
               run: |
                   export THEOS=$HOME/theos
                   echo "Building IPA package..."
+                  rm -rf ~/Library/Developer/Xcode/DerivedData
                   make package FINALPACKAGE=1 PACKAGE_FORMAT=ipa
 
             - name: Get IPA File Path
